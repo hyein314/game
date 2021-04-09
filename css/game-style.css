@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+body{
+    color: #222;
+    font-family: 'Noto Sans CJK KR';
+    background-image: url(../images/bg.png);
+    background-size: cover;
+}
+
+header{
+    width: 1600px;
+    margin: 0 auto;
+}
+
+header>h1{
+    width: 504px;
+    height: 243px;
+    margin: 150px auto 0;
+    text-indent: -9999px;
+    background-image: url(../images/header_font.png);
+    background-repeat: no-repeat;
+}
+
+section{
+    position: relative;
+    width: 1600px;
+    margin: 50px auto;
+}
+
+/* 게임 방법 */
+section>.way{
+    position: relative;
+    left: 50%;
+    width: 800px;
+    margin-left: -450px;
+    padding: 50px;
+    font-size: 20px;
+    line-height: 1.8;
+    text-align: center;
+    background-color: #feefc7;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+section>.way:before,
+section>.way:after{
+    position: absolute;
+    left: 50%;
+    width: 520px;
+    height: 37px;
+    margin-left: -260px;
+    background-image: url(../images/deco.png);
+    content: '';
+}
+
+section>.way:before{top: -17px;}
+section>.way:after{bottom: -20px;}
+
+/* 게임 */
+section>.game{
+    overflow: hidden;
+    position: relative;
+    height: 900px;
+    margin-top: 60px;
+    background-image: url(../images/bg-none.jpg);
+    background-size: cover;
+
+    cursor: url(../images/pointer.png), auto;
+}
+
+section>.game>h3{
+    position: relative;
+    padding-top: 30px;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.637);
+    z-index: 500;
+}
+
+
+/* 가림막 */
+section>.game>.part{
+    position: absolute;
+    left: -73px;
+    top: 0px;
+    width: 1600px;
+    height: 950px;
+    background-image: url(../images/bg_mod.png);
+    background-size: cover;
+    z-index: 100;
+    pointer-events: none;
+}
+
+/* 캐릭터 */
+section>.game>.frame{
+    display: block;
+    position: absolute;
+    width: 140px;
+    height: 140px;
+}
+
+section>.game>.frame>img{
+    display: block;
+    width: 100%;
+}
+
+/* start btn */
+section button{
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 35px;
+    background: #c70005;
+    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.623);
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    z-index: 500;
+}
+
+section>.game>button{
+    left: 70px;
+    bottom: 70px;
+}
+
+section button:hover{box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.623) inset;}
+
+section>.game>.score{
+    position: absolute;
+    left: 280px;
+    bottom: 70px;
+    color: #fff;
+    font-size: 50px;    
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.637);
+    z-index: 500;
+}
+
+section>.game>.shadow-suc,
+section>.game>.shadow-fail{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 500;
+}
+
+section .popUp{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 500px;
+    height: 300px;
+    margin: -200px 0 0 -300px;
+    padding: 50px;
+    text-align: center;
+    background-color: #fff;
+    z-index: 600;
+    cursor: default;
+}
+
+section .popUp>h4{font-size: 30px;}
+
+section .popUp>.endScore{
+    display: block;
+    height: 120px;
+    font-size: 45px;    
+    line-height: 120px;
+}
+
+section .popUp>.clse{
+    display: block;
+    width: 50px;
+    margin: 50px auto 0;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+section .popUp>.clse:hover{color: #999;}
+
+section .suc>p{
+    width: 282px;
+    height: 90px;
+    margin: 0 auto;
+    text-indent: -9999px;
+    background-image: url(../images/info.png);
+}
+
+section .fail>p{font-size: 20px;}
+
+section .fail>button{
+    left: 50%;
+    bottom: 80px;
+    margin-left: -75px;
+    font-size: 22px;
+}
+
+section .fail>.clse{margin-top: 120px;}
+
+footer{
+    padding: 50px 120px;
+    color: #fff;
+    font-size: 15px;
+    line-height: 2;
+    background-color: #64B04C;
+}

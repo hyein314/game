@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도와줘 마이숲!-게임 이벤트</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/game-style.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.easing.min.js"></script>
+    <script src="./js/function.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>도와줘 마이숲! 모기퇴치제 출시기념 GAME EVENT</h1>
+        </header>
+        <hr />
+        <section>
+            <h2 class="sr-only">도와줘 마이숲! 이벤트 게임</h2>
+            <article class="way">
+                <h3 class="sr-only">게임방법</h3>
+                <p>              
+                    START 버튼을 누르면 20초간 도와줘 마이숲! 모기잡기 게임이 진행됩니다! <br />
+                    모기는 총 4종류로 랜덤 출현하며, 재시작하게 될 경우 점수는 초기화됩니다. <br />
+                    점수 안내 : 쫄병 모기 : 100점, 창병 모기 : 200점, 장군 모기 : 300점, 대왕 모기 : 500점
+                </p>
+            </article>
+            <article class="game">
+                <h3>START 버튼을 누르면 게임이 시작됩니다!</h3>
+
+                <div class="part"></div>
+
+                <span class="frame mos"><img src="./images/mos-line.png" alt="쫄병모기"></span>
+                <span class="frame mos-soldier"><img src="./images/mos-soldier-line.png" alt="창병모기"></span>
+                <span class="frame mos-general"><img src="./images/mos-general-line.png" alt="장군모기"></span>
+                <span class="frame mos-king"><img src="./images/mos-king-line.png" alt="대왕모기"></span>
+            
+                <button type="button">START</button>
+                <strong class="score">0000점</strong>            
+                
+                <div class="shadow-suc">
+                    <div class="popUp suc">
+                        <h4>&#127881;축하합니다 모기군단 소탕성공&#127881;</h4>
+                        <span class="endScore">0000점</span>
+                        <p>
+                            인증샷을 아래 해시태그와 함께 인스타그램에 업로드하면 참여완료! #모기군단격파 #도와줘마이숲
+                        </p>
+                        <span class="clse">닫기</span>
+                    </div>
+                </div>
+                <div class="shadow-fail">
+                    <div class="popUp fail">
+                        <h4>&#9200;GAME OVER&#9200;</h4>
+                        <span class="endScore">0000점</span>
+                        <p>
+                            다시 한 번 도전하셔서 도와줘 마이숲! 받아가세요~
+                        </p>
+                        <button type="button">돌아가기</button>
+                        <span class="clse">닫기</span>
+                    </div>
+                </div>
+
+                <audio loop id="bgm" src="./source/game-bgm.mp3">
+                    HTML5를 지원하는 브라우저에서만 재생할 수 있습니다.
+                </audio>
+                <audio id="catch" src="./source/catch.mp3">
+                    HTML5를 지원하는 브라우저에서만 재생할 수 있습니다.
+                </audio>
+            </article>
+        </section>
+        <hr />
+        <footer>
+            <p>
+                * 내부 사정에 의하여 경품의 내용은 달라질 수 있습니다. <br />
+                * 이벤트 기간 내에 참여 가능한 이벤트로 해당 기간이 아닌 경우 당첨이 제한됩니다. <br />
+                * 개인정보는 배송 및 중복 수령 방지 목적으로 수집하며 이벤트 종료 후 파기합니다. <br />
+                * 본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다. © 2021 모기잡아조. All Rights Reserved.
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
